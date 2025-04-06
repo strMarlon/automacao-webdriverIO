@@ -4,3 +4,5 @@
 /allure-report
 /logs
 /package-lock.json
+/allure-results
+/reports/report-android-browserstack
