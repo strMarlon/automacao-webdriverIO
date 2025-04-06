@@ -1,6 +1,6 @@
 # WebdriverIO
 
-O objetivo deste projeto é apresentar uma estrutura para a automação de front em dispositivos Android e iOS, utilizando WebdriverIO em conjunto com Appium.
+Este projeto propõe uma estrutura de automação de testes para aplicações frontend em dispositivos Android e iOS, fazendo uso das ferramentas WebdriverIO e Appium.
 
 ## 👨‍💻 Autor
 
@@ -23,17 +23,17 @@ Marlon Amorim
     npm install
 ## 📝 Dependências
 
-- Node 16  
+- Node 20.19.0 
 - npm ou yarn  
-- Appium 2.1.3  
-- uiautomator2 2.45.1  
-- xcuitest 4.35.0  
+- Appium 2.17.1
+- uiautomator2 2.1.5  
+- xcuitest 7.28.3 
 
 ## 🏗️ Estrutura de pastas
 
 ```
 📁 app                # Aplicativos .apk e .app utilizados para execução local
-📁 configs            # Configurações do WebdriverIO para diferentes ambientes
+📁 configs            # Configurações do WebdriverIO para rodar o browserstack
 📁 logs               # Logs de execução
 📁 node_modules       # Módulos Node instalados
 📁 reports            # Relatórios e prints de execução no BrowserStack
@@ -41,7 +41,6 @@ Marlon Amorim
 📁 tests              # Casos de teste automatizados
 📄 .gitignore         # Arquivo para ignorar arquivos e pastas no Git
 📄 .babel.config.js   # Configurações Babel para transpilação
-📄 .env               # Variáveis de ambiente
 📄 package.json       # Metadados, scripts e dependências do projeto
 📄 wdio.android.conf.js      # Configuração local Android
 📄 wdio.ios.conf.js          # Configuração local iOS
@@ -109,15 +108,12 @@ Marlon Amorim
 
 ## 📊 Relatórios Allure
 
-Após a execução dos testes, para gerar e visualizar o relatório Allure:
+Após a execução dos testes, para gerar e visualizar o relatório Allur:e
 
 ```bash
-allure generate <caminho-da-pasta-de-resultados> --clean -o allure-report
-allure open
+allure generate allure-results --clean -o allure-report && allure open
 ```
-
-> Substitua `<caminho-da-pasta-de-resultados>` pela pasta de resultados desejada, como `results-android-local` ou `report-android-browserstack`.
 
 ## 🔁 Pipeline CI/CD
 
-Este projeto usa o GitLab CI para automação dos testes. A configuração do pipeline está no arquivo `.gitlab-ci.yml`.
+Este projeto usa o GitLab CI para automação dos testes. A configuração do pipeline está no arquivo `.github-cy.yml`.
