@@ -10,8 +10,7 @@
     "@wdio/mocha-framework": "^9.12.2",
     "@wdio/spec-reporter": "^9.12.2",
     "appium": "^2.0.1",
-    "appium-uiautomator2-driver": "^4.1.5",
-    "type": "module"
+    "appium-uiautomator2-driver": "^4.1.5"
   },
   "scripts": {
     "wdio_android": "wdio run wdio.android.conf.js",
