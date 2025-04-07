@@ -4,7 +4,7 @@ export const config = {
     key: process.env.BROWSERSTACK_ACCESS_KEY,
 
     specs: [
-        './test/specs/**/*.js'
+        './test/**/**/*.js'
     ],
 
     // Patterns to exclude.
