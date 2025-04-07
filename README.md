@@ -33,7 +33,6 @@ Marlon Amorim
 
 ```
 📁 app                # Aplicativos .apk e .app utilizados para execução local
-📁 configs            # Configurações do WebdriverIO para rodar o browserstack
 📁 logs               # Logs de execução
 📁 node_modules       # Módulos Node instalados
 📁 reports            # Relatórios e prints de execução no BrowserStack
