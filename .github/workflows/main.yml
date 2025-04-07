@@ -1,13 +1,29 @@
-image: node:16
+name: Testes no BrowserStack
 
-stages:
-  - test
+on:
+  push:
+    branches:
+      - '**'
 
-before_script:
-  - npm ci
-  - npm install --save-dev @babel/register @babel/core @babel/preset-env
+jobs:
+  browserstack-tests:
+    name: Executar testes no BrowserStack
+    runs-on: ubuntu-latest
 
-test_webdriverio_browserstack:
-  stage: test
-  script:
-    - npx wdio run configs/browserstack/wdio.android.bs.conf.js
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar testes com WebDriverIO no BrowserStack
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+        run: npx wdio run configs/browserstack/wdio.android.bs.conf.js
