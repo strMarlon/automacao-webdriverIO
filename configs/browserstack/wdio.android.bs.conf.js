@@ -1,12 +1,10 @@
 export const config = {
 
-    user: 'marlondamata_yOMlKo',
-    key: 'h1iTRwMKK5Gy7odqhQjKh',
+    user: process.env.BROWSERSTACK_USERNAME,
+    key: process.env.BROWSERSTACK_ACCESS_KEY,
 
     specs: [
-        '../tests/forms/forms.test.js',
-        '../tests/home/home.test.js',
-        '../tests/login/login.test.js'
+        './test/specs/**/*.js'
     ],
 
     // Patterns to exclude.
