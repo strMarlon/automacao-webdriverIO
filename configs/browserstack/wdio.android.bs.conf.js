@@ -34,7 +34,6 @@ export const config = {
 
     logLevel: 'error',
 
-    
     // Default timeout for all waitFor* commands.
 
     waitforTimeout: 18000,
@@ -47,21 +46,14 @@ export const config = {
 
     type: "module",
 
-    framework: 'mocha',
-    mochaOpts: {
-        ui: 'bdd',
-        timeout: 240000,
-        require: ['@babel/register']
+    framework: 'mocha', 
+        mochaOpts: {
+            require: ['@babel/register'],
+            timeout: 60000
     },
-
     reporters: ['spec', ['allure', {
         outputDir: 'report-android-browserstack',
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: false
     }]],
-
-    mochaOpts: {
-        require: ['@babel/register'],
-        timeout: 60000
-    }
 }
