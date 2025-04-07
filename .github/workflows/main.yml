@@ -1,0 +1,13 @@
+image: node:16
+
+stages:
+  - test
+
+before_script:
+  - npm ci
+  - npm install --save-dev @babel/register @babel/core @babel/preset-env
+
+test_webdriverio_browserstack:
+  stage: test
+  script:
+    - npx wdio run configs/browserstack/wdio.android.bs.conf.js
