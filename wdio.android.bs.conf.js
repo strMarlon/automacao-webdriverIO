@@ -51,10 +51,5 @@ export const config = {
         mochaOpts: {
             require: ['@babel/register'],
             timeout: 60000
-    },
-    reporters: ['spec', ['allure', {
-        outputDir: 'report-android-browserstack',
-        disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: false
-    }]],
+    }
 }
