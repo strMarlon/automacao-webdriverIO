@@ -1,7 +1,7 @@
 export const config = {
 
-    user: 'marlon_rl4NjQ',
-    key: 'hSxsGsznUEWoQCWTWi11',
+    user: 'marlondamata_yOMlKo',
+    key: 'h1iTRwMKK5Gy7odqhQjKh',
 
     specs: [
         '../tests/forms/forms.test.js',
@@ -25,7 +25,7 @@ export const config = {
         'appium:platformVersion': '16.0',
         'appium:deviceName': 'Pixel 6',
         'appium:automationName': 'UIAutomator2',
-        'appium:app': 'bs://dd4f469a55a8b66164435382219475e9988c4437'
+        'appium:app': 'bs://99a38da754106ef05c2307038b93f01487d6db9a'
     }],
 
     // ===================
