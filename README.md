@@ -115,4 +115,4 @@ allure generate allure-results --clean -o allure-report && allure open
 
 ## 🔁 Pipeline CI/CD
 
-Este projeto usa o GitLab CI para automação dos testes. A configuração do pipeline está no arquivo `.github-cy.yml`.
+Este projeto usa o GitHub CI para automação dos testes. A configuração do pipeline está no arquivo `.github/workflows/main.yml`.
