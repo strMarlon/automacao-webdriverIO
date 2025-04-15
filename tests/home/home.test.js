@@ -4,7 +4,7 @@ import { assert } from "chai"
 
 describe('Home', function () {
 
-    it.only('[CT04] - Validar as labels apresentadas na tela "Home".', async function () {
+    it('[CT04] - Validar as labels apresentadas na tela "Home".', async function () {
         assert.equal(await menuScreen.getAttributeBtnHome(), 'Home', 'A label "Home" do menu de serviços não foi exibida!')
         assert.isTrue(await menuScreen.isSelectedBtnHome(), 'O Botão "Home" do menu de serviços não foi exibido!')
         assert.isTrue(await homeScreen.isDisplayedImgDemoApp(), 'A imagem "Home scren" da tela da "home" não foi exibida!')
