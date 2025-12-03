@@ -3,6 +3,7 @@
     "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
     "@babel/register": "^7.25.9",
+    "@wdio/allure-reporter": "^9.21.0",
     "@wdio/appium-service": "^9.12.2",
     "@wdio/browserstack-service": "^9.12.4",
     "@wdio/cli": "^9.12.2",
@@ -10,12 +11,13 @@
     "@wdio/mocha-framework": "^9.12.2",
     "@wdio/spec-reporter": "^9.12.2",
     "appium": "^2.0.1",
-    "appium-uiautomator2-driver": "^4.1.5"
+    "appium-uiautomator2-driver": "^4.1.5",
+    "chai": "^6.2.1"
   },
   "scripts": {
-    "wdio_android": "wdio run wdio.android.conf.js",
-    "wdio_ios": "wdio run wdio.ios.conf.js",
-    "wdio_android_BS": "wdio run wdio.android.bs.conf.js",
+    "wdio_android": "wdio run config/local/wdio.android.conf.js",
+    "wdio_ios": "wdio run config/local/wdio.ios.conf.js",
+    "wdio_android_BS": "wdio run config/browserStack/wdio.android.bs.conf.js",
     "allure:generate": "allure generate allure-results --clean -o allure-report",
     "allure:open": "allure open allure-report"
   }

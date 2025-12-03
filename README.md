@@ -41,18 +41,18 @@ Marlon Amorim
 📄 .gitignore         # Arquivo para ignorar arquivos e pastas no Git
 📄 .babel.config.js   # Configurações Babel para transpilação
 📄 package.json       # Metadados, scripts e dependências do projeto
-📄 wdio.android.conf.js      # Configuração local Android
-📄 wdio.ios.conf.js          # Configuração local iOS
-📄 wdio.android.bs.conf.js   # Configuração Android BrowserStack
+📄 config/local/wdio.android.conf.js      # Configuração local Android
+📄 config/local/wdio.ios.conf.js          # Configuração local iOS
+📄 config/browserStack/wdio.android.bs.conf.js   # Configuração Android BrowserStack
 ```
 
 ## 💻 Scripts disponíveis
 
 ```json
 "scripts": {
-  "wdio_android": "wdio run wdio.android.conf.js",
-  "wdio_ios": "wdio run wdio.ios.conf.js",
-  "wdio_android_BS": "wdio run wdio.android.bs.conf.js",
+  "wdio_android": "wdio run config/local/wdio.android.conf.js",
+  "wdio_ios": "wdio run config/local/wdio.ios.conf.js",
+  "wdio_android_BS": "wdio run config/browserStack/wdio.android.bs.conf.js",
   "allure:generate": "allure generate allure-results --clean -o allure-report",
   "allure:open": "allure open allure-report"
 }
@@ -94,17 +94,17 @@ Marlon Amorim
 
 - Android local:
   ```bash
-  npx run wdio_android
+  npm run wdio_android
   ```
 
 - iOS local:
   ```bash
-  npx run wdio_ios
+  npm run wdio_ios
   ```
 
 - Android BrowserStack:
   ```bash
-  npx run wdio_android_BS
+  npm run wdio_android_BS
   ```
 
 ## 📊 Relatórios Allure

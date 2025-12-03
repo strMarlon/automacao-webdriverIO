@@ -1,24 +1,16 @@
-export const config = {
+exports.config = {
 
     //
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
 
     specs: [
-        './tests/forms/forms.test.js',
-        './tests/home/home.test.js',
-        './tests/login/login.test.js'
+        '../../tests/forms/forms.test.js',
+        '../../tests/home/home.test.js',
+        '../../tests/login/login.test.js'
     ],
 
-    // Patterns to exclude.
-
-    exclude: [
-    
-    ],
-
-    // ============
-    // Capabilities
-    // ============
+    exclude: [],
 
     maxInstances: 1,
     capabilities: [{
@@ -29,24 +21,11 @@ export const config = {
         'appium:app': 'bs://99a38da754106ef05c2307038b93f01487d6db9a'
     }],
 
-    // ===================
-    // Test Configurations
-    // ===================
-
     logLevel: 'error',
-
-    // Default timeout for all waitFor* commands.
-
     waitforTimeout: 18000,
-    
-    // Default request retries count
-    
     connectionRetryCount: 3,
-    
     services: ['browserstack'],
-
     type: "module",
-
     framework: 'mocha', 
         mochaOpts: {
             require: ['@babel/register'],
