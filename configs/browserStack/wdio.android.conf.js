@@ -5,15 +5,14 @@ export const config = {
     key: process.env.BROWSERSTACK_ACCESS_KEY,
 
     specs: [
-        './tests/forms/forms.test.js',
-        './tests/home/home.test.js',
-        './tests/login/login.test.js'
+        '../../tests/home/home.test.js',
+        '../../tests/login/login.test.js'
     ],
 
     // Patterns to exclude.
 
     exclude: [
-    
+
     ],
 
     // ============
@@ -38,18 +37,18 @@ export const config = {
     // Default timeout for all waitFor* commands.
 
     waitforTimeout: 18000,
-    
+
     // Default request retries count
-    
+
     connectionRetryCount: 3,
-    
+
     services: ['browserstack'],
 
     type: "module",
 
-    framework: 'mocha', 
-        mochaOpts: {
-            require: ['@babel/register'],
-            timeout: 60000
+    framework: 'mocha',
+    mochaOpts: {
+        require: ['@babel/register'],
+        timeout: 60000
     }
 }

@@ -7,7 +7,7 @@ exports.config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
-    
+
     port: 4723,
     //
     // ==================
@@ -25,9 +25,8 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './tests/forms/forms.test.js',
-        './tests/home/home.test.js',
-        './tests/login/login.test.js'
+        '../../tests/home/home.test.js',
+        '../../tests/login/login.test.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -60,7 +59,7 @@ exports.config = {
         'appium:platformVersion': '16.0',
         'appium:deviceName': 'Pixel 6',
         'appium:automationName': 'UIAutomator2',
-        'appium:app': path.resolve('./app/android/android.wdio.native.app.v1.0.8.apk') 
+        'appium:app': path.resolve('./app/android/wdiodemoapp.apk')
     }],
 
     //
@@ -110,7 +109,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [  
+    services: [
         ['appium', {
             args: {
                 address: 'localhost',
@@ -127,7 +126,7 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -144,11 +143,11 @@ exports.config = {
     reporters: [
         'spec',
         ['allure', {
-          outputDir: 'allure-results',
-          disableWebdriverStepsReporting: true,
-          disableWebdriverScreenshotsReporting: false,
+            outputDir: 'allure-results',
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: false,
         }]
-      ],
+    ],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/

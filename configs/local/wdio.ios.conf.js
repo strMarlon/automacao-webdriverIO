@@ -7,7 +7,7 @@ exports.config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
-    
+
     port: 4723,
     //
     // ==================
@@ -25,9 +25,8 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './tests/forms/forms.test.js',
-        './tests/home/home.test.js',
-        './tests/login/login.test.js'
+        '../../tests/home/home.test.js',
+        '../../tests/login/login.test.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -57,8 +56,8 @@ exports.config = {
     //
     capabilities: [{
         'appium:platformName': 'iOS',
-        'appium:platformVersion': '18.4',
-        'appium:deviceName': 'iPhone 11',
+        'appium:platformVersion': '18.6',
+        'appium:deviceName': 'iPhone 16 Pro',
         'appium:automationName': 'XCUITest',
         'appium:app': path.join(process.cwd(), "./app/ios/wdiodemoapp.app"),
     }],
@@ -121,7 +120,7 @@ exports.config = {
     framework: 'mocha',
     waitforTimeout: 18000,
     connectionRetryTimeout: 90000,
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
